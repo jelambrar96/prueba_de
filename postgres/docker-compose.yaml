@@ -23,6 +23,7 @@ services:
       PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
     volumes:
       - pgadmin-data:/var/lib/pgadmin
+      - ./database:/docker-entrypoint-initdb.d/
 
 volumes:
   local-pgdata:
